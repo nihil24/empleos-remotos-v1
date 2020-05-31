@@ -8,8 +8,11 @@
           <p>{{item.company}}</p>
           <p>{{item.type}}</p>
           <p>{{item.location}}</p>
+          <a :href="'http://127.0.0.1:8000/api/jobs/' + item.id"> {{item.title}} </a> 
         </li>
+        
     </ul>
+     
 </div>
    
 </template>
@@ -19,7 +22,6 @@ export default{
     data(){
         return {
             empleos: []
-           
         }
     },
     mounted() {

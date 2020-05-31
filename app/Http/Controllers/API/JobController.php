@@ -21,8 +21,7 @@ class JobController extends Controller
 
         if (!$empleos) {
             response()->json([
-                'success'=>false,
-                'status'=>400
+                'message' => 'Page Not Found'
             ]);
         } 
         response()->json([
@@ -53,11 +52,23 @@ class JobController extends Controller
      */
     public function show($id)
     {
-        return response()->json([
+
+        $empleos = Empleo::find($id);
+
+        if (!$id) {
+            response()->json([
+                'message' => 'Not Found',
+                'status'=>404
+            ]);
+        } 
+
+        response()->json([
             'success'=>true,
             'message'=>'string',
             'data'=>Empleo::find($id)
-          ]);
+        ]);
+        
+        return $empleos;
     }
 
     /**

@@ -1924,6 +1924,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -37500,7 +37503,13 @@ var render = function() {
           _vm._v(" "),
           _c("p", [_vm._v(_vm._s(item.type))]),
           _vm._v(" "),
-          _c("p", [_vm._v(_vm._s(item.location))])
+          _c("p", [_vm._v(_vm._s(item.location))]),
+          _vm._v(" "),
+          _c(
+            "a",
+            { attrs: { href: "http://127.0.0.1:8000/api/jobs/" + item.id } },
+            [_vm._v(" " + _vm._s(item.title) + " ")]
+          )
         ])
       }),
       0
