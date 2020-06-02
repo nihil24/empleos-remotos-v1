@@ -1,17 +1,22 @@
 <template>
   <div id="app">
-    
-    <Home msg="Welcome to Your Vue.js App"/>
+    <div id="nav">
+        <router-link to="/">Home</router-link>
+        <router-link to="/Detalle">Detalle</router-link>
+    </div>
+    <router-view/>
   </div>
 </template>
 
 <script>
-import Home from './pages/Home.vue'
+import Home from './pages/Home'
+import Detalle from './pages/Detalle'
 
 export default {
-  name: 'App',
+  name: 'app',
   components: {
-    Home
+    Home,
+    Detalle
   }
 }
 </script>

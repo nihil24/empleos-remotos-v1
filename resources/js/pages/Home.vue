@@ -9,10 +9,8 @@
           <p>{{item.type}}</p>
           <p>{{item.location}}</p>
           <a :href="'http://127.0.0.1:8000/api/jobs/' + item.id"> {{item.title}} </a> 
-        </li>
-        
-    </ul>
-     
+        </li> 
+    </ul>  
 </div>
    
 </template>
