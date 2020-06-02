@@ -72,7 +72,7 @@
                 </div>
 
                 <div id="app">
-                    <empleos />
+                    <app />
                 </div>
                 <script src="{{ asset('js/app.js') }}" ></script>
 
