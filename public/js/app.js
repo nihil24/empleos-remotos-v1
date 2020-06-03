@@ -1919,7 +1919,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -1952,23 +1951,23 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      empleos: [],
-      empleo: {
-        title: ''
-      }
+      empleos: []
     };
   },
-  mounted: function mounted() {
+  created: function created() {
     var _this = this;
 
     axios.get('http://127.0.0.1:8000/api/jobs/' + this.$route.params.id).then(function (response) {
-      _this.empleos.id = response.data.id;
-      _this.empleos.title = response.data.title;
-      _this.empleos.company = response.data.company;
-      _this.empleos.description = response.data.description;
+      _this.empleos = response.data;
       console.log(_this.empleos);
     })["catch"](function (error) {
       console.log(error);
@@ -38220,11 +38219,7 @@ var render = function() {
       _c(
         "div",
         { attrs: { id: "nav" } },
-        [
-          _c("router-link", { attrs: { to: "/" } }, [_vm._v("Home")]),
-          _vm._v(" "),
-          _c("router-link", { attrs: { to: "/Detalle" } }, [_vm._v("Detalle")])
-        ],
+        [_c("router-link", { attrs: { to: "/" } }, [_vm._v("Home")])],
         1
       ),
       _vm._v(" "),
@@ -38259,7 +38254,18 @@ var render = function() {
     _c("section", { staticClass: "jumbotron tex-center" }, [
       _c("div", { staticClass: "container" }, [
         _c("h1", [_vm._v("Empleo: " + _vm._s(_vm.$route.params.id))])
-      ])
+      ]),
+      _vm._v(" "),
+      _c(
+        "ul",
+        { staticClass: "list-group" },
+        _vm._l(_vm.empleos, function(item, index) {
+          return _c("li", { key: index, staticClass: "list-group-item" }, [
+            _c("p", [_vm._v(_vm._s(item) + " " + _vm._s(index))])
+          ])
+        }),
+        0
+      )
     ])
   ])
 }
