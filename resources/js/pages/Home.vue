@@ -8,7 +8,9 @@
           <p>{{item.company}}</p>
           <p>{{item.type}}</p>
           <p>{{item.location}}</p>
-          <a :href="'http://127.0.0.1:8000/api/jobs/' + item.id"> {{item.title}} </a> 
+
+          <h2><router-link v-bind:to="'/Detalle/' + item.id">{{item.title}}</router-link></h2>
+
         </li> 
     </ul>  
 </div>
