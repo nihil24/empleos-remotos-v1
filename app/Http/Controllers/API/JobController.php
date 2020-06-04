@@ -53,7 +53,8 @@ class JobController extends Controller
     public function show($id)
     {
 
-        $empleos = Empleo::find($id);
+        $empleo = Empleo::find($id);
+        
 
         if (!$id) {
             response()->json([
@@ -68,7 +69,7 @@ class JobController extends Controller
             'data'=>Empleo::find($id)
         ]);
         
-        return $empleos;
+        return $empleo;
     }
 
     /**

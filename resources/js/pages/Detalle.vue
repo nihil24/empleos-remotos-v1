@@ -4,12 +4,10 @@
             <div class="container">
                 <h1>Empleo: {{$route.params.id}}</h1>
             </div>
-            <ul class="list-group">
-                <li class="list-group-item" 
-                v-for="(item, index) in empleos"  v-bind:key="index">
-                    <p>{{item}} {{index}}</p>
-                </li>
-            </ul>      
+            <p>{{empleo.title}}</p>
+            <p>{{empleo.company}}</p>
+            <p>{{empleo.description}}</p>
+
         </section>
     </div>
         
@@ -20,13 +18,13 @@
 export default{
     data(){
         return {
-          empleos: []
+          empleo: {}
         }
     },
     created() {
         axios.get('http://127.0.0.1:8000/api/jobs/' + this.$route.params.id).then(response=>{
-            this.empleos = response.data;
-            console.log(this.empleos);
+            this.empleo = response.data;
+            console.log(this.empleo);
                 }).catch(function (error) {
                     console.log(error);
             });
