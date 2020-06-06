@@ -27,14 +27,11 @@ export default{
           empleo: {}
         }
     },
-    created() {
-        axios.get('http://127.0.0.1:8000/api/jobs/' + this.$route.params.id).then(response=>{
-            this.empleo = response.data;
-            console.log(this.empleo);
-                }).catch(function (error) {
-                    console.log(error);
-            });
-    }   
+    async created() {
+        const result = await this.$axios.get('http://127.0.0.1:8000/api/jobs/' + this.$route.params.id);
+        this.empleo = result.data;
+        console.log(result);  
+    }
     
 }
 </script>

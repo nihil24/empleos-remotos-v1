@@ -43,12 +43,10 @@ export default{
             empleos: {}
         }
     },
-    mounted() {
-        axios.get('http://127.0.0.1:8000/api/jobs').then(response=>{
-            this.empleos = response.data;
-                }).catch(function (error) {
-                    console.log(error);
-            });
+    async created() {
+        const result = await this.$axios.get('http://127.0.0.1:8000/api/jobs')
+        this.empleos = result.data;
+        console.log(result);
     }   
     
 }

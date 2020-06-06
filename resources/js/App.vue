@@ -2,7 +2,7 @@
 <v-app>
 <v-toolbar class="blue darken-4 text-center" dense>
   <v-toolbar-title>
-    <router-link class="secondary" to="/"> <a> Home </a></router-link>
+    <router-link to="/"> <v-icon large dark>mdi-home</v-icon></router-link>
   </v-toolbar-title>
     <v-spacer></v-spacer>
 
@@ -27,11 +27,6 @@ export default {
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
