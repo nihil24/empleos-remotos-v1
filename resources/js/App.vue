@@ -1,10 +1,15 @@
 <template>
-  <div id="app">
-    <div id="nav">
-        <router-link to="/">Home</router-link>
-    </div>
+<v-app>
+<v-toolbar class="blue darken-4 text-center" dense>
+  <v-toolbar-title>
+    <router-link class="secondary" to="/"> <a> Home </a></router-link>
+  </v-toolbar-title>
+    <v-spacer></v-spacer>
+
+</v-toolbar>
     <router-view/>
-  </div>
+</v-app>
+
 </template>
 
 <script>

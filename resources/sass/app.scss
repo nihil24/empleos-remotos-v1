@@ -6,3 +6,13 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+// Vuetify
+@import '~vuetify/dist/vuetify.min.css';
+
+// Material Design Icons
+@import '~@mdi/font/css/materialdesignicons.min.css';
+
+$color-pack: false;
+
+@import '~vuetify/src/styles/main.sass';

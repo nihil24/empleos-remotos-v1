@@ -1,20 +1,39 @@
 <template>
-<div>
-     <h3>Lista de Empleos:</h3>
-    <ul class="list-group">
-        <li class="list-group-item" 
-            v-for="(item, index) in empleos" :key="index" >
-          <p>{{item.title}}</p>
-          <p>{{item.company}}</p>
-          <p>{{item.type}}</p>
-          <p>{{item.location}}</p>
+<v-app>
+    <v-container class="my-5" >
+            <h3>Lista de Empleos:</h3>
+        <v-layout row wrap>
+            <v-row no-gutters >
+                <v-flex xs12 sm6 md4 lg3 v-for="(item, index) in empleos" :key="index">
+                    <v-card class="primary text-xs-center ma-3" >
+                        <v-card-title class="text-xs-center ma-3">
+                            <h5 class="secondary--text">{{item.title}}</h5>
+                        </v-card-title>
+                        
+                        <v-card-subtitle>
+                            <p class="secondary--text">{{item.company}}</p>
+                        </v-card-subtitle>
 
-          <h2><router-link v-bind:to="'/Detalle/' + item.id">{{item.title}}</router-link></h2>
-
-        </li> 
-    </ul>  
-</div>
-   
+                        <v-card-text>
+                            <p class="secondary--text">{{item.type}}</p>
+                        </v-card-text>
+                        
+                        <v-card-text>
+                            <p class="secondary--text">{{item.location}}</p>
+                        </v-card-text>
+                        
+                        <v-card-actions class="justify-center">
+                            <v-btn class="secondary"> 
+                                <h4 ><router-link v-bind:to="'/Detalle/' + item.id">Saber Más</router-link></h4>
+                            </v-btn>
+                        </v-card-actions>
+                    </v-card>
+                </v-flex>
+            </v-row>
+        </v-layout>
+    </v-container>
+        
+</v-app>
 </template>
 
 <script>
