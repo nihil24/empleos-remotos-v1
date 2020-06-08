@@ -6,7 +6,9 @@ import routes from './routes'
 import Axios from 'axios'
 import 'vuetify/dist/vuetify.min.css'
 import colors from 'vuetify/lib/util/colors'
-
+import '@mdi/font/css/materialdesignicons.css'
+import 'material-design-icons-iconfont/dist/material-design-icons.css'
+import '@fortawesome/fontawesome-free/css/all.css'
 
 Vue.prototype.$axios = Axios;
 
@@ -30,6 +32,9 @@ export default new Vuetify({
         accent: colors.shades.black,
       },
     },
+  },
+  icons: {
+    iconfont: 'fa', // 'mdi' || 'mdiSvg' || 'md' || 'fa' || 'fa4' || 'faSvg'
   },
 })
 

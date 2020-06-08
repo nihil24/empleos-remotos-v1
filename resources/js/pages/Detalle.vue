@@ -1,20 +1,34 @@
 <template>
 <v-app>
-    <v-card class="mx-auto" max-width="344">
+    <v-container>
+        <h3>Lista de Empleos:</h3>
+        <v-card class="mx-auto primary text-xs-center ma-3 " max-width="344" :elevation="20">
         <v-card-title>
-            <h3> {{empleo.title}} </h3>
+            <h3 class="secondary--text"> {{empleo.title}} </h3>
         </v-card-title>
 
         <v-card-subtitle>
-            <v-icon large>mdi-domain</v-icon>
-            <h2>{{empleo.company}}</h2>
+            <v-icon x-large dark>mdi-domain</v-icon>
+            <h5 class="secondary--text">{{empleo.company}}</h5>
         </v-card-subtitle>
-            
+
         <v-card-text>
-            <p>{{empleo.description}}</p>
+            <p class="secondary--text">{{empleo.description}}</p>
         </v-card-text>
-        
-    </v-card>  
+
+        <v-card-text>
+            <v-icon medium dark>fas fa-calendar-alt</v-icon>
+            <p class="secondary--text">{{empleo.type}}</p>
+        </v-card-text>
+
+        <v-card-text>
+            <v-icon medium dark>fas fa-map-marker-alt</v-icon>
+            <p class="secondary--text">{{empleo.location}}</p>
+        </v-card-text>
+
+    </v-card> 
+    </v-container>
+     
 </v-app>
   
 </template>

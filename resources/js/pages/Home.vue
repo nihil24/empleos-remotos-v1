@@ -5,20 +5,23 @@
         <v-layout row wrap>
             <v-row no-gutters >
                 <v-flex xs12 sm6 md4 lg3 v-for="(item, index) in empleos" :key="index">
-                    <v-card class="primary text-xs-center ma-3" >
-                        <v-card-title class="text-xs-center ma-3">
+                    <v-card class="primary ma-3" :elevation="20">
+                        <v-card-title>
                             <h5 class="secondary--text">{{item.title}}</h5>
                         </v-card-title>
                         
                         <v-card-subtitle>
+                            <v-icon large dark>mdi-domain</v-icon>
                             <p class="secondary--text">{{item.company}}</p>
                         </v-card-subtitle>
 
                         <v-card-text>
+                            <v-icon medium dark>fas fa-calendar-alt</v-icon>
                             <p class="secondary--text">{{item.type}}</p>
                         </v-card-text>
                         
                         <v-card-text>
+                            <v-icon medium dark>fas fa-map-marker-alt</v-icon>
                             <p class="secondary--text">{{item.location}}</p>
                         </v-card-text>
                         
