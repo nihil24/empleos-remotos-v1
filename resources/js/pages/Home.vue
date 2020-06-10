@@ -3,10 +3,10 @@
     <v-container class="my-5" >
             <h3>Lista de Empleos:</h3>
         <v-layout row wrap>
-            <v-row no-gutters >
-                <v-flex xs12 sm6 md4 lg3 v-for="(item, index) in empleos" :key="index">
-                    <v-card class="primary ma-3" :elevation="20">
-                        <v-card-title>
+            <v-row no-gutters align="center" justify="center" >
+                <v-flex xs12 sm6 md4 lg3  v-for="(item, index) in empleos" :key="index">
+                    <v-card class="teal darken-4 ma-9" height="400" width="270" :elevation="20">
+                        <v-card-title class="justify-center">
                             <h5 class="secondary--text">{{item.title}}</h5>
                         </v-card-title>
                         
@@ -26,9 +26,11 @@
                         </v-card-text>
                         
                         <v-card-actions class="justify-center">
-                            <v-btn class="secondary"> 
-                                <h4 ><router-link v-bind:to="'/Detalle/' + item.id">Saber Más</router-link></h4>
-                            </v-btn>
+                            <router-link v-bind:to="'/Detalle/' + item.id">
+                                <v-btn class="accent"> 
+                                    Saber Más
+                                </v-btn>
+                            </router-link>
                         </v-card-actions>
                     </v-card>
                 </v-flex>
@@ -50,7 +52,10 @@ export default{
         const result = await this.$axios.get('http://127.0.0.1:8000/api/jobs')
         this.empleos = result.data;
         console.log(result);
-    }   
-    
+    }
 }
 </script>
+
+<style>
+
+</style>

@@ -13,6 +13,7 @@ import '@fortawesome/fontawesome-free/css/all.css'
 Vue.prototype.$axios = Axios;
 
 require('./bootstrap');
+
 window.Vue = require('vue');
 
 Vue.use(VueRouter);

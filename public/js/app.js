@@ -2216,6 +2216,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2245,7 +2246,6 @@ function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
-//
 //
 //
 //
@@ -2332,6 +2332,8 @@ function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
+//
+//
 //
 //
 //
@@ -6898,7 +6900,7 @@ exports.push([module.i, "@charset \"UTF-8\";\r\n@font-face {\r\n  font-family: '
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/vuetify/dist/vuetify.min.css":
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/vuetify/dist/vuetify.min.css?bdb9":
 /*!***********************************************************************************************************************************!*\
   !*** ./node_modules/css-loader??ref--6-1!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vuetify/dist/vuetify.min.css ***!
   \***********************************************************************************************************************************/
@@ -39521,7 +39523,7 @@ var render = function() {
     [
       _c(
         "v-toolbar",
-        { staticClass: "blue darken-4 text-center", attrs: { dense: "" } },
+        { staticClass: "teal darken-4 text-center", attrs: { dense: "" } },
         [
           _c(
             "v-toolbar-title",
@@ -39583,7 +39585,7 @@ var render = function() {
           _c(
             "v-card",
             {
-              staticClass: "mx-auto primary text-xs-center ma-3 ",
+              staticClass: "teal darken-4 mx-auto text-xs-center ma-3 ",
               attrs: { "max-width": "344", elevation: 20 }
             },
             [
@@ -39687,7 +39689,13 @@ var render = function() {
             [
               _c(
                 "v-row",
-                { attrs: { "no-gutters": "" } },
+                {
+                  attrs: {
+                    "no-gutters": "",
+                    align: "center",
+                    justify: "center"
+                  }
+                },
                 _vm._l(_vm.empleos, function(item, index) {
                   return _c(
                     "v-flex",
@@ -39699,15 +39707,19 @@ var render = function() {
                       _c(
                         "v-card",
                         {
-                          staticClass: "primary ma-3",
-                          attrs: { elevation: 20 }
+                          staticClass: "teal darken-4 ma-9",
+                          attrs: { height: "400", width: "270", elevation: 20 }
                         },
                         [
-                          _c("v-card-title", [
-                            _c("h5", { staticClass: "secondary--text" }, [
-                              _vm._v(_vm._s(item.title))
-                            ])
-                          ]),
+                          _c(
+                            "v-card-title",
+                            { staticClass: "justify-center" },
+                            [
+                              _c("h5", { staticClass: "secondary--text" }, [
+                                _vm._v(_vm._s(item.title))
+                              ])
+                            ]
+                          ),
                           _vm._v(" "),
                           _c(
                             "v-card-subtitle",
@@ -39759,19 +39771,18 @@ var render = function() {
                             "v-card-actions",
                             { staticClass: "justify-center" },
                             [
-                              _c("v-btn", { staticClass: "secondary" }, [
-                                _c(
-                                  "h4",
-                                  [
-                                    _c(
-                                      "router-link",
-                                      { attrs: { to: "/Detalle/" + item.id } },
-                                      [_vm._v("Saber Más")]
+                              _c(
+                                "router-link",
+                                { attrs: { to: "/Detalle/" + item.id } },
+                                [
+                                  _c("v-btn", { staticClass: "accent" }, [
+                                    _vm._v(
+                                      " \r\n                                    Saber Más\r\n                                "
                                     )
-                                  ],
-                                  1
-                                )
-                              ])
+                                  ])
+                                ],
+                                1
+                              )
                             ],
                             1
                           )
@@ -96750,7 +96761,7 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_vue__;
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../css-loader??ref--6-1!../../postcss-loader/src??ref--6-2!./vuetify.min.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/vuetify/dist/vuetify.min.css");
+var content = __webpack_require__(/*! !../../css-loader??ref--6-1!../../postcss-loader/src??ref--6-2!./vuetify.min.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/vuetify/dist/vuetify.min.css?bdb9");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 

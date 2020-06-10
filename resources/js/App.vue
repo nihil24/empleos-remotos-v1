@@ -1,10 +1,11 @@
 <template>
 <v-app>
-<v-toolbar class="blue darken-4 text-center" dense>
+<v-toolbar class="teal darken-4 text-center" dense>
   <v-toolbar-title>
     <router-link to="/"><v-icon x-large dark>mdi-home</v-icon></router-link>
   </v-toolbar-title>
-    <v-spacer></v-spacer>
+  
+<v-spacer></v-spacer>
 
 </v-toolbar>
     <router-view/>
