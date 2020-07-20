@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers\API;
 
+use App\Empleo;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-
-use App\Empleo;
 
 class JobController extends Controller
 {
@@ -21,18 +20,18 @@ class JobController extends Controller
 
         if (!$empleos) {
             response()->json([
-                'message' => 'Page Not Found'
+                'message' => 'Page Not Found',
             ]);
-        } 
+        }
         response()->json([
-            'success'=>true,
-            'status'=>200,
-            'data'=> $empleos
+            'success' => true,
+            'status' => 200,
+            'data' => $empleos,
         ]);
 
         return $empleos;
     }
-    
+
     /**
      * Store a newly created resource in storage.
      *
@@ -53,22 +52,21 @@ class JobController extends Controller
     public function show($id)
     {
 
-        $empleo = Empleo::find($id);
-        
+        $empleo = Empleo::findOrFail($id);
 
         if (!$id) {
             response()->json([
-                'message' => 'Not Found',
-                'status'=>404
+                'message' => 'string',
+                'status' => 404,
             ]);
-        } 
+        }
 
         response()->json([
-            'success'=>true,
-            'message'=>'string',
-            'data'=>Empleo::find($id)
+            'success' => true,
+            'message' => 'string',
+            'data' => Empleo::find($id),
         ]);
-        
+
         return $empleo;
     }
 

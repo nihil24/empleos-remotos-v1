@@ -1,13 +1,10 @@
-
-import Home from './pages/Home.vue'
-import Detalle from './pages/Detalle.vue'
+import Home from "./pages/Home.vue";
+import Detalle from "./pages/Detalle.vue";
 
 const routes = [
-    { path: '/', 
-      component: Home },
+    { path: "/", component: Home },
 
-    { path: '/Detalle/:id', 
-      component: Detalle }
-]
+    { path: "/Detalle/:id", component: Detalle }
+];
 
 export default routes;

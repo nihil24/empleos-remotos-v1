@@ -1,29 +1,29 @@
 <template>
-<v-app>
-<v-toolbar class="teal darken-4 text-center" dense>
-  <v-toolbar-title>
-    <router-link to="/"><v-icon x-large dark>mdi-home</v-icon></router-link>
-  </v-toolbar-title>
-  
-<v-spacer></v-spacer>
+  <v-app>
+    <v-toolbar class="teal darken-4 text-center" dense>
+      <v-toolbar-title>
+        <router-link to="/">
+          <v-icon x-large dark>mdi-home</v-icon>
+        </router-link>
+      </v-toolbar-title>
 
-</v-toolbar>
-    <router-view/>
-</v-app>
-
+      <v-spacer></v-spacer>
+    </v-toolbar>
+    <router-view />
+  </v-app>
 </template>
 
 <script>
-import Home from './pages/Home'
-import Detalle from './pages/Detalle'
+import Home from "./pages/Home";
+import Detalle from "./pages/Detalle";
 
 export default {
-  name: 'app',
+  name: "app",
   components: {
     Home,
     Detalle
   }
-}
+};
 </script>
 
 <style>

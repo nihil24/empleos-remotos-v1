@@ -2220,7 +2220,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: 'app',
+  name: "app",
   components: {
     Home: _pages_Home__WEBPACK_IMPORTED_MODULE_0__["default"],
     Detalle: _pages_Detalle__WEBPACK_IMPORTED_MODULE_1__["default"]
@@ -2278,8 +2278,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2295,20 +2293,28 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
-              _context.next = 2;
-              return _this.$axios.get('http://127.0.0.1:8000/api/jobs/' + _this.$route.params.id);
+              _context.prev = 0;
+              _context.next = 3;
+              return _this.$axios.get("http://127.0.0.1:8000/api/jobs/" + _this.$route.params.id);
 
-            case 2:
+            case 3:
               result = _context.sent;
               _this.empleo = result.data;
               console.log(result);
+              _context.next = 11;
+              break;
 
-            case 5:
+            case 8:
+              _context.prev = 8;
+              _context.t0 = _context["catch"](0);
+              console.log(_context.t0);
+
+            case 11:
             case "end":
               return _context.stop();
           }
         }
-      }, _callee);
+      }, _callee, null, [[0, 8]]);
     }))();
   }
 });
@@ -2372,9 +2378,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2391,7 +2394,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           switch (_context.prev = _context.next) {
             case 0:
               _context.next = 2;
-              return _this.$axios.get('http://127.0.0.1:8000/api/jobs');
+              return _this.$axios.get("http://127.0.0.1:8000/api/jobs");
 
             case 2:
               result = _context.sent;
@@ -39585,13 +39588,13 @@ var render = function() {
           _c(
             "v-card",
             {
-              staticClass: "teal darken-4 mx-auto text-xs-center ma-3 ",
+              staticClass: "teal darken-4 mx-auto text-xs-center ma-3",
               attrs: { "max-width": "344", elevation: 20 }
             },
             [
               _c("v-card-title", [
                 _c("h3", { staticClass: "secondary--text" }, [
-                  _vm._v(" " + _vm._s(_vm.empleo.title) + " ")
+                  _vm._v(_vm._s(_vm.empleo.title))
                 ])
               ]),
               _vm._v(" "),
@@ -39776,9 +39779,7 @@ var render = function() {
                                 { attrs: { to: "/Detalle/" + item.id } },
                                 [
                                   _c("v-btn", { staticClass: "accent" }, [
-                                    _vm._v(
-                                      " \r\n                                    Saber Más\r\n                                "
-                                    )
+                                    _vm._v("Saber Más")
                                   ])
                                 ],
                                 1
@@ -97536,10 +97537,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var routes = [{
-  path: '/',
+  path: "/",
   component: _pages_Home_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
 }, {
-  path: '/Detalle/:id',
+  path: "/Detalle/:id",
   component: _pages_Detalle_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
 }];
 /* harmony default export */ __webpack_exports__["default"] = (routes);
@@ -97564,8 +97565,8 @@ var routes = [{
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\Howls\OneDrive\Escritorio\Felipe\Practica Programación Web\empleos-remotos-v1\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\Howls\OneDrive\Escritorio\Felipe\Practica Programación Web\empleos-remotos-v1\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! D:\Programador\Practica Programación Web\empleos-remotos-v1\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! D:\Programador\Practica Programación Web\empleos-remotos-v1\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
